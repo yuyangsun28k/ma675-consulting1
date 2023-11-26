@@ -1,0 +1,25 @@
+---
+title: "Replication"
+author: "Yuyang Sun"
+date: "2023-11-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Stata Setup
+
+```{r, echo=FALSE}
+install.packages('RStata')
+library(RStata)
+options("RStata.StataPath" = "/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp")
+options("RStata.StataVersion" = 18)
+```
+
+```{r}
+stata("do \"/Users/thomas/Downloads/ma675/consulting project/china/data/DO14_main_analyses.do\"", echo = TRUE)
+
+```
+
